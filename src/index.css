@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen font-sans antialiased transition-colors duration-300;
+  @apply bg-gradient-to-br from-slate-50 via-indigo-50/40 to-violet-50/60 text-slate-900;
+}
+
+html.dark body {
+  @apply bg-gradient-to-br from-slate-950 via-indigo-950/50 to-violet-950/40 text-slate-100;
+}
+
+.glass-panel {
+  @apply rounded-2xl border border-white/60 bg-white/75 shadow-xl shadow-indigo-500/5 backdrop-blur-xl;
+  @apply dark:border-white/10 dark:bg-slate-900/70 dark:shadow-black/40;
+}
+
+.ptr-touch {
+  touch-action: pan-y;
+}
